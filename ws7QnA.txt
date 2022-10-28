@@ -1,0 +1,15 @@
+WS 7
+
+To remove all the commas, dots, and semicolons,
+I used |tr ',' " "| tr '.' " "| tr ';' " "|
+
+To remove stopwords:
+sed 's/\<and\>//g' |sed 's/\<or\>//g' | sed 's/\<if\>//g'| sed 's/\<in\>//g'| sed 's/\<it\>//g'
+
+To remove HTML tags:
+ sed 's/<[^>]*>//g ; /^$/d' 
+
+To remove <.../> with sed:
+sed -e 's/\.//g'
+
+
